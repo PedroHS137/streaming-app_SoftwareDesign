@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -15,7 +16,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
-
+import java.util.Scanner;
 
 public class category {
     public String catlv1 = "";
@@ -26,7 +27,7 @@ public class category {
     public String getCategorylv1() {
         category cat = new category();
         String vOutput = cat.ReadCellData(pos, 1);
-        //System.out.println(vOutput);
+        //System.out.println(vOutput);1
        return vOutput;
     }
     public String getCategorylv2() {
@@ -80,21 +81,28 @@ public class category {
     }
 
     public static void main (String[]args){
-        category cat = new category();
-        String str = cat.getRndShow();
-        String str1 = cat.getCategorylv1();
-        String str2 = cat.getCategorylv2();
-        String str3 = cat.getCategorylv3();
-        System.out.println("nombre del programa: " + str + " , categoriaLv1: " + str1 +
-                " , categoriaLv2: " + str2 + " , categoriaLv3: " + str3);
-
-        String str_1 = cat.getRndShow();
-        String str11 = cat.getCategorylv1();
-        String str21 = cat.getCategorylv2();
-        String str31 = cat.getCategorylv3();
-        System.out.println("nombre del programa: " + str_1 + " , categoriaLv1: " + str11 +
-                " , categoriaLv2: " + str21 + " , categoriaLv3: " + str31);
-
-
+        // category cat = new category();
+        // String str = cat.getRndShow();
+        // String str1 = cat.getCategorylv1();
+        // String str2 = cat.getCategorylv2();
+        // String str3 = cat.getCategorylv3();
+        // System.out.println("nombre del programa: " + str + " , categoriaLv1: " + str1 +
+        //        " , categoriaLv2: " + str2 + " , categoriaLv3: " + str3);
+        Scanner in = new Scanner(System.in);
+        game game = new game();
+        System.out.println("ingresa el nivel de dificultad(1,2 o 3) ");
+        int a = in.nextInt();
+        //System.out.println( a );
+        System.out.println(" ingresa la cantidad de horas disponibles(100,200 o 300) ");
+        int b = in.nextInt();
+        if(a == 1){
+            game.level1(b);
+        }
+        if(a == 2){
+            game.level2(b);
+        }
+        if(a == 3){
+            game.level3(b);
+        }
     }
 }
