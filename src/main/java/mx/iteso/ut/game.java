@@ -10,7 +10,7 @@ public class game {
     ArrayList<String> vistoCat = new ArrayList<>();
     int a = cat.getRndShowPos();
 
-    public void level1(int time) {
+    public float level1(int time) {
         int currTime = 0;
         category cat = new category();
         Scanner in = new Scanner(System.in);
@@ -46,8 +46,10 @@ public class game {
         }
         System.out.println();
         System.out.println("PUNTAJE: " + sc.getTotalScore(vistoCat,showsVistos));
+        return sc.getTotalScore(vistoCat,showsVistos);
+
     }
-    public void level2(int time) {
+    public float level2(int time) {
         int currTime = 0;
         int cantidadVistaDeBasura = 0;
         category cat = new category();
@@ -83,9 +85,10 @@ public class game {
         }
         System.out.println();
         System.out.println("PUNTAJE: " + sc.getTotalScore(vistoCat,showsVistos));
+        return sc.getTotalScore(vistoCat,showsVistos);
     }
 
-    public void level3(int time) {
+    public float level3(int time) {
         int currTime = 0;
         category cat = new category();
         Scanner in = new Scanner(System.in);
@@ -122,6 +125,7 @@ public class game {
         }
         System.out.println();
         System.out.println("PUNTAJE: " + sc.getTotalScore(vistoCat, showsVistos));
+        return sc.getTotalScore(vistoCat,showsVistos);
     }
 
 
