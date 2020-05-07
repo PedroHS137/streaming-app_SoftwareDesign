@@ -19,9 +19,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import java.util.Scanner;
 
 public class category {
-    public String catlv1 = "";
-    public String catlv2 = "";
-    public String catlv3 = "";
     public int pos;
 
     public String getCategorylv1() {
@@ -76,23 +73,14 @@ public class category {
         category cat = new category();
         Random rand = new Random();
         int rand_int1 = rand.nextInt(202);
-        // String vOutput = cat.ReadCellData(rand_int1, 0);
         return rand_int1;
     }
 
-    public static void main (String[]args){
-        // category cat = new category();
-        // String str = cat.getRndShow();
-        // String str1 = cat.getCategorylv1();
-        // String str2 = cat.getCategorylv2();
-        // String str3 = cat.getCategorylv3();
-        // System.out.println("nombre del programa: " + str + " , categoriaLv1: " + str1 +
-        //        " , categoriaLv2: " + str2 + " , categoriaLv3: " + str3);
+    public static void main (String[]args) {
         Scanner in = new Scanner(System.in);
         game game = new game();
         System.out.println("ingresa el nivel de dificultad(1,2 o 3) ");
         int a = in.nextInt();
-        //System.out.println( a );
         System.out.println(" ingresa la cantidad de horas disponibles(100,200 o 300) ");
         int b = in.nextInt();
         if(a == 1){

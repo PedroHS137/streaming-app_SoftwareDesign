@@ -34,8 +34,6 @@ public class Score {
         // for (Map.Entry<String, Integer> entry : counts.entrySet()) {
             // System.out.println(entry.getKey() + " = " + entry.getValue());
         // }
-
-
         return score;
     }
 }

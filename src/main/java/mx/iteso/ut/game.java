@@ -24,13 +24,11 @@ public class game {
             System.out.println("ver show de tv? 1:si , 0:no ");
             int a = in.nextInt();
             if(a == 1 && !(str1.equals("inadecuado"))) {
-                //System.out.println("a ");
                 currTime += 10;
                 visto.add(str +" , "+ str1);
                 vistoCat.add(str1);
             }
             if(a == 1 && str1.equals("inadecuado")) {
-                //System.out.println("b ");
                 currTime += 20;
                 cantidadVistaDeBasura ++;
                 visto.add(str +" , "+ str1);
@@ -62,7 +60,7 @@ public class game {
             System.out.println("nombre: " + str + " ,categoria: " + str1);
             System.out.println("ver show de tv? 1:si , 0:no ");
             int a = in.nextInt();
-            if(a == 1 && !str1.equals("violento") || !str1.equals("sexual") || !str1.equals("inculto") ) {
+            if(a == 1) {
                 currTime += 10;
                 visto.add(str +" , "+ str1);
                 vistoCat.add(str1);
@@ -99,11 +97,8 @@ public class game {
             String str1 = cat.getCategorylv3();
             System.out.println("nombre: " + str + " ,categoria: " + str1);
             System.out.println("ver show de tv? 1:si , 0:no ");
-            // Talk Shows, Morning Shows, Infomerciales, Cine de Ficheras y Telenovelas
             int a = in.nextInt();
-            if (a == 1 && !(str1.equals("violento")) || !str1.equals("sexual") || !str1.equals("talk shows") ||
-                    !str1.equals("informerciales") || !str1.equals("cine de ficheras")
-                    || !str1.equals("telenovelas") || !str1.equals("morning shows")) {
+            if (a == 1) {
                 currTime += 10;
                 visto.add(str +" , "+ str1);
                 vistoCat.add(str1);
@@ -126,7 +121,7 @@ public class game {
             System.out.println(strShow);
         }
         System.out.println();
-        System.out.println("PUNTAJE: " + sc.getTotalScore(vistoCat,showsVistos));
+        System.out.println("PUNTAJE: " + sc.getTotalScore(vistoCat, showsVistos));
     }
 
 
