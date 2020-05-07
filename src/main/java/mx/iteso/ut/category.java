@@ -75,7 +75,7 @@ public class category {
     public int getRndShowPos() {
         category cat = new category();
         Random rand = new Random();
-        int rand_int1 = rand.nextInt(59);
+        int rand_int1 = rand.nextInt(202);
         // String vOutput = cat.ReadCellData(rand_int1, 0);
         return rand_int1;
     }
