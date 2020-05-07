@@ -3,10 +3,7 @@ package mx.iteso.ut;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-import org.mockito.Mockito.*;
-import static org.hamcrest.CoreMatchers.allOf;
-import static org.junit.Assert.assertThat;
+
 
 public class CategoryTest {
     category category;
@@ -47,17 +44,17 @@ public class CategoryTest {
     @Test
     public void testReadCellData1() {
         int a = category.getRndShowPos();
-        assertTrue(!category.ReadCellData(a,1).isEmpty());
+        assertTrue(!category.readCellData(a,1).isEmpty());
     }
     @Test
     public void testReadCellData2() {
         int a = category.getRndShowPos();
-        assertTrue(!category.ReadCellData(a,2).isEmpty());
+        assertTrue(!category.readCellData(a,2).isEmpty());
     }
     @Test
     public void testReadCellData3() {
         int a = category.getRndShowPos();
-        assertTrue(!category.ReadCellData(a,3).isEmpty());
+        assertTrue(!category.readCellData(a,3).isEmpty());
     }
 
 }

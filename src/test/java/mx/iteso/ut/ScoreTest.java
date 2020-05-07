@@ -2,17 +2,18 @@ package mx.iteso.ut;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-import org.mockito.Mockito.*;
+
 
 import java.util.ArrayList;
 
 public class ScoreTest {
     Score score;
+    category category;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         score = new Score();
+        category = new category();
     }
 
     @Test

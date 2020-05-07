@@ -5,6 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Score {
+    /**
+     *
+     * @param array,showsVistos
+     * @return score
+     */
     public float getTotalScore(ArrayList <String> array, int showsVistos){
         int score = 0;
         boolean hasSeenCrap = false;

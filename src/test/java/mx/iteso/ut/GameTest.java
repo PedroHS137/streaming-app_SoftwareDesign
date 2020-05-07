@@ -3,12 +3,11 @@ package mx.iteso.ut;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-import org.mockito.Mockito.*;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Scanner;
+
 
 public class GameTest {
         game game;
