@@ -16,7 +16,18 @@ import org.apache.poi.ss.usermodel.Cell;
  * class.
  */
 public class category {
+    /**
+     * var.
+     */
     private int pos;
+    /**
+     * var.
+     */
+    private final int dbDta = 202;
+    /**
+     * var.
+     */
+    private final int col3 = 3;
 
     /**
      *
@@ -48,7 +59,7 @@ public class category {
      */
     public String getCategorylv3() {
         category cat = new category();
-        String vOutput = cat.readCellData(pos, 3);
+        String vOutput = cat.readCellData(pos, col3);
         //System.out.println(vOutput);
         return vOutput;
     }
@@ -68,9 +79,7 @@ public class category {
                     + "Diseño de software\\tv shows.xlsx");
             wb = new XSSFWorkbook(fis);
 
-        }
-
-        catch(IOException e1) {
+        } catch (IOException e1) {
             e1.printStackTrace();
         }
         Sheet sheet = wb.getSheetAt(0);
@@ -99,7 +108,7 @@ public class category {
     public int getRndShowPos() {
         category cat = new category();
         Random rand = new Random();
-        int randInt1 = rand.nextInt(202);
+        int randInt1 = rand.nextInt(dbDta);
         return randInt1;
     }
     /**
@@ -107,7 +116,7 @@ public class category {
      * @param args
      * @return
      */
-    public static void main(String[]args) {
+    public static void main(final String[]args) {
         Scanner in = new Scanner(System.in);
         game game = new game();
         System.out.println(" "
