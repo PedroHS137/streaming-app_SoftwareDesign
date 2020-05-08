@@ -44,7 +44,8 @@ public class CategoryTest {
     @Test
     public void testReadCellData1() {
         int a = category.getRndShowPos();
-        assertTrue(!category.readCellData(a,1).isEmpty());
+        boolean b = category.readCellData(a,1).isEmpty();
+        assertTrue(!b);
     }
     @Test
     public void testReadCellData2() {
